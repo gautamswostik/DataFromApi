@@ -16,6 +16,10 @@
 		7C03ABF92929E05800567026 /* DataFromApiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C03ABF82929E05800567026 /* DataFromApiTests.swift */; };
 		7C03AC032929E05800567026 /* DataFromApiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C03AC022929E05800567026 /* DataFromApiUITests.swift */; };
 		7C03AC052929E05800567026 /* DataFromApiUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C03AC042929E05800567026 /* DataFromApiUITestsLaunchTests.swift */; };
+		7C03AC152929E0CA00567026 /* JsonPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C03AC142929E0CA00567026 /* JsonPostViewController.swift */; };
+		7C03AC172929E18E00567026 /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C03AC162929E18E00567026 /* PostModel.swift */; };
+		7C03AC1A2929E20500567026 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C03AC192929E20500567026 /* ApiManager.swift */; };
+		7C03AC1C292A27C700567026 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C03AC1B292A27C700567026 /* PostTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,10 @@
 		7C03ABFE2929E05800567026 /* DataFromApiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DataFromApiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C03AC022929E05800567026 /* DataFromApiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFromApiUITests.swift; sourceTree = "<group>"; };
 		7C03AC042929E05800567026 /* DataFromApiUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFromApiUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		7C03AC142929E0CA00567026 /* JsonPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonPostViewController.swift; sourceTree = "<group>"; };
+		7C03AC162929E18E00567026 /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
+		7C03AC192929E20500567026 /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
+		7C03AC1B292A27C700567026 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +107,10 @@
 		7C03ABE02929E05600567026 /* DataFromApi */ = {
 			isa = PBXGroup;
 			children = (
+				7C03AC182929E1F700567026 /* Manager */,
+				7C03AC132929E07600567026 /* Controller */,
+				7C03AC122929E06D00567026 /* Views */,
+				7C03AC112929E06600567026 /* Model */,
 				7C03ABE12929E05600567026 /* AppDelegate.swift */,
 				7C03ABE32929E05600567026 /* SceneDelegate.swift */,
 				7C03ABE52929E05600567026 /* ViewController.swift */,
@@ -125,6 +137,38 @@
 				7C03AC042929E05800567026 /* DataFromApiUITestsLaunchTests.swift */,
 			);
 			path = DataFromApiUITests;
+			sourceTree = "<group>";
+		};
+		7C03AC112929E06600567026 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7C03AC162929E18E00567026 /* PostModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7C03AC122929E06D00567026 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7C03AC1B292A27C700567026 /* PostTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7C03AC132929E07600567026 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				7C03AC142929E0CA00567026 /* JsonPostViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		7C03AC182929E1F700567026 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				7C03AC192929E20500567026 /* ApiManager.swift */,
+			);
+			path = Manager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,8 +302,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C03AC1C292A27C700567026 /* PostTableViewCell.swift in Sources */,
 				7C03ABE62929E05600567026 /* ViewController.swift in Sources */,
+				7C03AC172929E18E00567026 /* PostModel.swift in Sources */,
 				7C03ABE22929E05600567026 /* AppDelegate.swift in Sources */,
+				7C03AC152929E0CA00567026 /* JsonPostViewController.swift in Sources */,
+				7C03AC1A2929E20500567026 /* ApiManager.swift in Sources */,
 				7C03ABE42929E05600567026 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

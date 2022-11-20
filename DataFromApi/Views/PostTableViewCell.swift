@@ -8,16 +8,45 @@
 import UIKit
 
 class PostTableViewCell: UITableViewCell {
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    
+    
+    static let postTableIdentifier = "postDataIdentifier"
+    
+    var postData =  PostModel()
+    
+    lazy var textLebel : UILabel = {
+        let uiLabel = UILabel()
+        uiLabel.numberOfLines = 0
+        uiLabel.translatesAutoresizingMaskIntoConstraints = false
+        return uiLabel
+    } ()
+    
+   
+    
+    
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: PostTableViewCell.postTableIdentifier)
+        
+        addSubview(textLebel)
+        
+        NSLayoutConstraint.activate([
+            textLebel.leadingAnchor.constraint(equalTo: leadingAnchor , constant: 10),
+            textLebel.trailingAnchor.constraint(equalTo: trailingAnchor , constant: 10)
+        ])
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    
+    
+    func setPost(post: PostModel) {
+        textLebel.text = post.title ?? ""
     }
-
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+    }
+    
 }
