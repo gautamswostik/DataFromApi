@@ -25,7 +25,7 @@ class ApiManager {
         let task = URLSession.shared.dataTask(with: URLRequest(url: url)) {(data , response , error) in
             
             if let error = error {
-                print("Error While Fetching Data ; \(error)")
+                completionHandler(.failure(error))
             }
 
             guard let postData = data else {return}
