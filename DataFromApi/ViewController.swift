@@ -39,9 +39,6 @@ class ViewController: UIViewController {
         
         view.addSubview(tableView)
         
-        
-        NSLayoutConstraint.activate([
-        ])
     }
     
     override func viewDidLayoutSubviews() {
