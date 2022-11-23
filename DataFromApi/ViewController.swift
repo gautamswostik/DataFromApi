@@ -64,12 +64,7 @@ extension ViewController: UITableViewDelegate , UITableViewDataSource {
     
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        20
+        return 10
     }
-    
-    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        20
-    }
-    
      
 }

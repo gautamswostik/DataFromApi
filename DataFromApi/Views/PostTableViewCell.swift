@@ -15,24 +15,30 @@ class PostTableViewCell: UITableViewCell {
     var postData: PostModel = .init() {
         didSet {
             textLebel.text = postData.title ?? ""
-//            idLabel.text = "1"
+            idLabel.text = "\(postData.id ?? 0)"
         }
     }
     
     let idLabel : UILabel = {
         let uiLabel = UILabel()
-        uiLabel.font = .boldSystemFont(ofSize: 2)
+        uiLabel.font = .boldSystemFont(ofSize: 20)
         uiLabel.textColor = .blue
-        uiLabel.text = "1"
+        uiLabel.translatesAutoresizingMaskIntoConstraints = false
         return uiLabel
     } ()
+    
     
     lazy  var idContainer : UIView = {
         let idContainer = UIView()
         idContainer.layer.borderWidth = 1
-        idContainer.layer.borderColor = UIColor.cyan.cgColor
-        
+        idContainer.layer.borderColor = UIColor.black.cgColor
+        idContainer.layer.cornerRadius = 10
         idContainer.addSubview(idLabel)
+        
+        NSLayoutConstraint.activate([
+            idLabel.centerXAnchor.constraint(equalTo: idContainer.centerXAnchor),
+            idLabel.centerYAnchor.constraint(equalTo: idContainer.centerYAnchor),
+        ])
         return idContainer
     }()
     
@@ -49,10 +55,10 @@ class PostTableViewCell: UITableViewCell {
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.addArrangedSubview(idContainer)
         stackView.addArrangedSubview(textLebel)
+        stackView.alignment = .center
         stackView.spacing  = 20
         
         
-      
         return stackView
     } ()
     
@@ -73,12 +79,9 @@ class PostTableViewCell: UITableViewCell {
         addSubview(postDataStackView)
         
         NSLayoutConstraint.activate([
-            idContainer.heightAnchor.constraint(equalToConstant: contentView.bounds.height),
+            idContainer.heightAnchor.constraint(equalToConstant: contentView.bounds.height * 0.90),
             idContainer.widthAnchor.constraint(equalToConstant: 50),
             
-            //ID labe; alignment
-            idLabel.centerXAnchor.constraint(equalTo: idContainer.centerXAnchor),
-            idLabel.centerYAnchor.constraint(equalTo: idContainer.centerYAnchor),
             
             //UiStack view constraints
             postDataStackView.trailingAnchor.constraint(equalTo: trailingAnchor , constant:  -10),
