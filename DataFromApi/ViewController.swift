@@ -20,13 +20,15 @@ class ViewController: UIViewController {
         return tableView
     } ()
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         ApiManager.scope.getPosts { (postsDatas) in
             
             switch postsDatas {
             case .success(let posts):
-               
+                
                 DispatchQueue.main.async {
                     self.postData = posts
                     self.tableView.reloadData()
@@ -38,8 +40,18 @@ class ViewController: UIViewController {
         }
         
         view.addSubview(tableView)
+        addNavigationBarItem()
         
     }
+    
+    func addNavigationBarItem() {
+        let image = UIImage(systemName: "folder.fill")
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: image, style: .done, target: self, action: nil)
+        navigationItem.rightBarButtonItems = [
+            UIBarButtonItem(image: UIImage(systemName: "person"), style: .done, target: self, action: nil),
+            UIBarButtonItem(image: UIImage(systemName: "play.rectangle"), style: .done, target: self, action: nil),]
+    }
+    
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
@@ -59,9 +71,15 @@ extension ViewController: UITableViewDelegate , UITableViewDataSource {
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let nextScreen = PostDataDetailViewController()
+        nextScreen.postData =  postData[indexPath.row]
+        navigationController?.pushViewController(nextScreen, animated: true)
+    }
+    
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 10
     }
-     
+    
 }

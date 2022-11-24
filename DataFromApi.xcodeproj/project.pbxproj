@@ -16,7 +16,7 @@
 		7C03ABF92929E05800567026 /* DataFromApiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C03ABF82929E05800567026 /* DataFromApiTests.swift */; };
 		7C03AC032929E05800567026 /* DataFromApiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C03AC022929E05800567026 /* DataFromApiUITests.swift */; };
 		7C03AC052929E05800567026 /* DataFromApiUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C03AC042929E05800567026 /* DataFromApiUITestsLaunchTests.swift */; };
-		7C03AC152929E0CA00567026 /* JsonPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C03AC142929E0CA00567026 /* JsonPostViewController.swift */; };
+		7C03AC152929E0CA00567026 /* PostDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C03AC142929E0CA00567026 /* PostDataViewController.swift */; };
 		7C03AC172929E18E00567026 /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C03AC162929E18E00567026 /* PostModel.swift */; };
 		7C03AC1A2929E20500567026 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C03AC192929E20500567026 /* ApiManager.swift */; };
 		7C03AC1C292A27C700567026 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C03AC1B292A27C700567026 /* PostTableViewCell.swift */; };
@@ -54,7 +54,7 @@
 		7C03ABFE2929E05800567026 /* DataFromApiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DataFromApiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C03AC022929E05800567026 /* DataFromApiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFromApiUITests.swift; sourceTree = "<group>"; };
 		7C03AC042929E05800567026 /* DataFromApiUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFromApiUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		7C03AC142929E0CA00567026 /* JsonPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonPostViewController.swift; sourceTree = "<group>"; };
+		7C03AC142929E0CA00567026 /* PostDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDataViewController.swift; sourceTree = "<group>"; };
 		7C03AC162929E18E00567026 /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
 		7C03AC192929E20500567026 /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
 		7C03AC1B292A27C700567026 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
@@ -161,7 +161,7 @@
 		7C03AC132929E07600567026 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				7C03AC142929E0CA00567026 /* JsonPostViewController.swift */,
+				7C03AC142929E0CA00567026 /* PostDataViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -309,7 +309,7 @@
 				7C03ABE62929E05600567026 /* ViewController.swift in Sources */,
 				7C03AC172929E18E00567026 /* PostModel.swift in Sources */,
 				7C03ABE22929E05600567026 /* AppDelegate.swift in Sources */,
-				7C03AC152929E0CA00567026 /* JsonPostViewController.swift in Sources */,
+				7C03AC152929E0CA00567026 /* PostDataViewController.swift in Sources */,
 				7CE96E8E292DAA7B00F883A3 /* UserModel.swift in Sources */,
 				7C03AC1A2929E20500567026 /* ApiManager.swift in Sources */,
 				7C03ABE42929E05600567026 /* SceneDelegate.swift in Sources */,
