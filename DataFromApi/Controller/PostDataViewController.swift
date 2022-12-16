@@ -57,6 +57,8 @@ class PostDataDetailViewController: UIViewController {
         return stackView
     } ()
     
+    // make vertical stack of title and body instead
+    
     lazy var postDataDetailStackview : UIStackView = {
         let stackView = UIStackView(arrangedSubviews: [titleSection , bodyView])
         stackView.translatesAutoresizingMaskIntoConstraints = false
@@ -71,9 +73,6 @@ class PostDataDetailViewController: UIViewController {
         view.addSubview(postDataDetailStackview)
         view.backgroundColor = .systemBackground
         navigationItem.title = postData.title
-        
-        
-        
         
         NSLayoutConstraint.activate([
             idContainer.heightAnchor.constraint(equalToConstant: 50),

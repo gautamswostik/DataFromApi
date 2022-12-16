@@ -11,6 +11,7 @@ import UIKit
 
 class ViewController: UIViewController {
     var postData: [PostModel] = []
+
     
     lazy var tableView : UITableView = {
         let tableView  = UITableView()
@@ -24,6 +25,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let loader = self.loader()
         ApiManager.scope.getPosts { (postsDatas) in
             
             switch postsDatas {
@@ -34,11 +36,18 @@ class ViewController: UIViewController {
                     self.tableView.reloadData()
                 }
                 print(self.postData)
+                
             case .failure(let error):
                 print(error)
+                
             }
+            DispatchQueue.main.async {
+                self.stopLoader(loader: loader)
+            }
+            
+            
         }
-        
+
         view.addSubview(tableView)
         addNavigationBarItem()
         
@@ -83,3 +92,6 @@ extension ViewController: UITableViewDelegate , UITableViewDataSource {
     }
     
 }
+
+
+

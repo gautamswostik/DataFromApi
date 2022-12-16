@@ -23,10 +23,19 @@ class ApiManager {
         guard let url = URL(string: "\(ApiConstants.BASE_URL)/posts") else {return}
         
         let task = URLSession.shared.dataTask(with: URLRequest(url: url)) {(data , response , error) in
-            
+            //HANDLE ERROR
             if let error = error {
                 completionHandler(.failure(error))
             }
+            
+            //HANDLE EMPtY RESPONSE
+            guard let response = response as? HTTPURLResponse else {
+                print("response id empty")
+                return
+            }
+            
+            print("Resonse Status code \(response.statusCode)")
+
             
             guard let postData = data else {return}
             
